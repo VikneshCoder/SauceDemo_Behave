@@ -5,8 +5,8 @@ from selenium.webdriver.support.ui import Select
 @given('I log in with valid credentials')
 def log_in(context):
     context.driver.get("https://www.saucedemo.com/")
-    context.driver.find_element(By.ID, 'user-name').send_keys("standard_user")  # Replace with your username
-    context.driver.find_element(By.ID, 'password').send_keys("secret_sauce")     # Replace with your password
+    context.driver.find_element(By.ID, 'user-name').send_keys("standard_user")
+    context.driver.find_element(By.ID, 'password').send_keys("secret_sauce")
     context.driver.find_element(By.ID, 'login-button').click()
 @given('I am on the inventory page')
 def given_inventory_page(context):
