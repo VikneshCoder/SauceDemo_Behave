@@ -14,6 +14,7 @@ Feature: Verify that as a customer who is not locked out, I need to be able to l
     Then I verify the Error Message contains the text "Sorry, this user has been banned."
 
   Scenario: Order a product
+    Given I log in with valid credentials
     Given I am on the inventory page
     When user sorts products from high price to low price
     And user adds highest priced product
