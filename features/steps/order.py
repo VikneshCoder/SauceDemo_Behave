@@ -61,3 +61,5 @@ def click_finish(context):
 def verify_thank_you_header(context):
     Thank_You_Message = context.driver.find_element(By.CLASS_NAME, 'complete-header')
     assert "Thank you for your order!" in Thank_You_Message.text
+    context.driver.save_screenshot('screenshot.png')  # Saves the screenshot in the current directory
+
